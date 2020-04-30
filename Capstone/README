@@ -1,0 +1,66 @@
+# CAPSTONE PROJECT - Tesla Stock Predictor 
+
+By Joyce Ooi
+
+
+This document covers the following:
+
+
+**A Study on the Use of a Classification Model**
+- Using tactics such as webscraping, simplification and combining of existing features
+- Scraping techniques and the use of VADAR Sentiment Analysis
+- Exploring Random Forest, Decision Trees, Extra Trees, AdaBoost, K Nearest Neighbors and - Logistic Regression models 
+ -Building a basic classification model
+
+
+**Problem Statement**
+
+There is difficulty in selecting stocks with consistent Return on Investment (ROI) due to market volatility. We want to identify stocks that allow us to predict consistent returns and which might also allow portfolio diversification, by identifying stocks that correlate to each other or correlate to economic indicators.
+
+We want to train a classifier to predict whether a stock price will generate positive or negative intraday returns. Success will be evaluated via F1 score as well as Accuracy and AUC Scores.
+
+We want to be able to predict whether stocks in this portfolio will generate positive or negative returns and adjust our stock selection accordingly.
+
+Our model uses a 2-pronged approach:
+
+Approach 1: Auto regression, ie. using previous timepoints as predictors of outcome and as features (e.g. previous days closing price and moving averages).
+
+Approach 2: News sentiment and twitter sentiment
+
+The aim of this project is to build a predictive model that would predict whether Tesla stock would close up or down for a given day based on the information on the intraday price of previous days as well as the movements in regional indexes, news related to Tesla stock as well as Twitter feeds by its CEO Elon Musk.
+
+Part 1 : At the initial ideas stage we identified 2 groups of stocks to investigate and predict before settling on Tesla. The two options were
+1) FANNG stocks versus Cloud stocks (Co-relation with each other and co-relation to variables such as previous day percentage changes in DJI, current percentage changes in regional indexes (CAC, DAX) and news headlines related to eack stock)
+2) Any 2 stocks exhibiting a positive or negative co-relation.
+
+Part 3 is the selection process whereby we narrowed our selection down to Tesla to make predictions. Tesla was selected due to the frequency of Elon Musk's Twitter feeds and strong Twitter following which we felt could have impact on Tesla's share price. Tesla's headline sentiments also showed a higher correlation to opening change and percent change compared to Facebook or Google. Furthermore, Tesla stock showed little correlation to the other FAANG stocks which made it suitable for portfolio diversification.
+
+Part 4 is the modelling process, where we selected a series of models to find the best Classifier. These included:
+- Logistic Regression
+- KNeighboursClassifier
+- AdaboostClassifier
+- DecisionTree Classifier
+- RandomForestClassfier
+- ExtraTreesClassifier
+
+Part 5 is the conclusion of our project with the process from start to finish outlining all the steps taken, and the presentation and analysis of the predictive model /models Notebook.
+
+Our best classifier is **Random Forest*** which was able to predict Tesla's share price with an accuracy 0.79% (compared to baseline of about 51%). The Random Forest model also achieved the following scores:
+
+- Accuracy:0.7896995708154506
+- Precision:0.7554585152838428
+- Sensitivity:0.6232558139534884
+- Specificity:0.7768924302788844
+- Recall:0.8046511627906977
+- F1 Score:0.7792792792792792 
+
+**Model Evaluation**
+
+Limitations: 
+Financial market forecasting is one of the most difficult practical applications and especially given market volatility. An even better score may have been attained by employing a more sophisticated model and deeper learning approach. One consideration could have been the use of LSTM, RNN and ARIMA which could have been combined in a Feedforward Neural Network to give a more accurate prediction. An approach of combining different methods through Ensemble learning could also have been adopted.
+
+Advantages:
+Combines both endogenous and exogenous approach which is more holistic.
+Scoring was reasonable  although improvements could certainly be made.
+
+
