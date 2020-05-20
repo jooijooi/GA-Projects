@@ -15,13 +15,13 @@ This document covers the following:
 
 **Problem Statement**
 
-There is difficulty in selecting stocks with consistent Return on Investment (ROI) due to market volatility. We want to identify stocks that allow us to predict consistent returns and which might also allow portfolio diversification, by identifying stocks that correlate to each other or correlate to economic indicators.
+There is difficulty in selecting stocks with consistent Return on Investment (ROI) due to market volatility. The objective is to identify stocks that allow one to predict consistent returns and which might also allow portfolio diversification, by identifying stocks that correlate to each other or correlate to economic indicators.
 
-We want to train a classifier to predict whether a stock price will generate positive or negative intraday returns. Success will be evaluated via F1 score as well as Accuracy and AUC Scores.
+The aim is to train a classifier to predict whether a stock price will generate positive or negative intraday returns. Success will be evaluated via F1 score as well as Accuracy and AUC Scores.
 
-We want to be able to predict whether stocks in this portfolio will generate positive or negative returns and adjust our stock selection accordingly.
+The outcome is to be able to predict whether stocks in this portfolio will generate positive or negative returns and adjust the stock selection accordingly.
 
-Our model uses a 2-pronged approach:
+My model uses a 2-pronged approach:
 
 Approach 1: Auto regression, ie. using previous timepoints as predictors of outcome and as features (e.g. previous days closing price and moving averages).
 
@@ -29,13 +29,13 @@ Approach 2: News sentiment and twitter sentiment
 
 The aim of this project is to build a predictive model that would predict whether Tesla stock would close up or down for a given day based on the information on the intraday price of previous days as well as the movements in regional indexes, news related to Tesla stock as well as Twitter feeds by its CEO Elon Musk.
 
-Part 1 : At the initial ideas stage we identified 2 groups of stocks to investigate and predict before settling on Tesla. The two options were
+Part 1 : At the initial ideas stage I identified 2 groups of stocks to investigate and predict before settling on Tesla. The two options were
 1) FANNG stocks versus Cloud stocks (Co-relation with each other and co-relation to variables such as previous day percentage changes in DJI, current percentage changes in regional indexes (CAC, DAX) and news headlines related to eack stock)
 2) Any 2 stocks exhibiting a positive or negative co-relation.
 
-Part 3 is the selection process whereby we narrowed our selection down to Tesla to make predictions. Tesla was selected due to the frequency of Elon Musk's Twitter feeds and strong Twitter following which we felt could have impact on Tesla's share price. Tesla's headline sentiments also showed a higher correlation to opening change and percent change compared to Facebook or Google. Furthermore, Tesla stock showed little correlation to the other FAANG stocks which made it suitable for portfolio diversification.
+Part 3 is the selection process whereby I narrowed the selection down to Tesla to make predictions. Tesla was selected due to the frequency of Elon Musk's Twitter feeds and strong Twitter following which we felt could have impact on Tesla's share price. Tesla's headline sentiments also showed a higher correlation to opening change and percent change compared to Facebook or Google. Furthermore, Tesla stock showed little correlation to the other FAANG stocks which made it suitable for portfolio diversification.
 
-Part 4 is the modelling process, where we selected a series of models to find the best Classifier. These included:
+Part 4 is the modelling process, where I selected a series of models to find the best Classifier. These included:
 - Logistic Regression
 - KNeighboursClassifier
 - AdaboostClassifier
@@ -43,9 +43,9 @@ Part 4 is the modelling process, where we selected a series of models to find th
 - RandomForestClassfier
 - ExtraTreesClassifier
 
-Part 5 is the conclusion of our project with the process from start to finish outlining all the steps taken, and the presentation and analysis of the predictive model /models Notebook.
+Part 5 is the conclusion of my project with the process from start to finish outlining all the steps taken, and the presentation and analysis of the predictive model /models Notebook.
 
-Our best classifier is **Random Forest*** which was able to predict Tesla's share price with an accuracy 0.79% (compared to baseline of about 51%). The Random Forest model also achieved the following scores:
+The best classifier is **Random Forest*** which was able to predict Tesla's share price with an accuracy 0.79% (compared to baseline of about 51%). The Random Forest model also achieved the following scores:
 
 - Accuracy:0.7896995708154506
 - Precision:0.7554585152838428
